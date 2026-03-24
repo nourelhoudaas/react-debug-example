@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import Counter from "./Counter";
 
 function App() {
-  const [userName, setUserName] = useState(""); // state pour le nom
+  const [userName, setUserName] = useState("Nour"); // valeur définie
+
   return (
     <div>
       <h1>Bonjour, {userName}</h1>
-      {/* On oublie de passer la prop name à Counter */}
-      <Counter />
+      <Counter name={userName} /> {/* on passe la prop correctement */}
     </div>
   );
 }
